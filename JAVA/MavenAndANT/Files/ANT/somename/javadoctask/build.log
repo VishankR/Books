@@ -1,0 +1,137 @@
+<<< TASK FINISHED -- org.apache.tools.ant.UnknownElement@3901d134
+>>> TASK STARTED -- org.apache.tools.ant.UnknownElement@14d3bc22
+--- MESSAGE LOGGED
+Setting project property: source.dir -> .
+<<< TASK FINISHED -- org.apache.tools.ant.UnknownElement@14d3bc22
+>>> TASK STARTED -- org.apache.tools.ant.UnknownElement@2ddc8ecb
+--- MESSAGE LOGGED
+Setting project property: doc.dir -> ./docdir
+<<< TASK FINISHED -- org.apache.tools.ant.UnknownElement@2ddc8ecb
+--- MESSAGE LOGGED
+Setting ro project property: ant.project.invoked-targets -> default
+--- MESSAGE LOGGED
+Attempting to create object of type org.apache.tools.ant.helper.DefaultExecutor
+--- MESSAGE LOGGED
+Adding reference: ant.executor
+--- MESSAGE LOGGED
+Build sequence for target(s) `default' is [default]
+--- MESSAGE LOGGED
+Complete build sequence is [default, ]
+>> TARGET STARTED -- default
+
+default:
+>>> TASK STARTED -- org.apache.tools.ant.UnknownElement@778d1062
+--- MESSAGE LOGGED
+   [delete] Deleting directory C:\Users\Admin\Desktop\somename\javadoctask\docdir
+--- MESSAGE LOGGED
+   [delete] Deleting directory C:\Users\Admin\Desktop\somename\javadoctask\docdir
+<<< TASK FINISHED -- org.apache.tools.ant.UnknownElement@778d1062
+>>> TASK STARTED -- org.apache.tools.ant.UnknownElement@15ff3e9e
+--- MESSAGE LOGGED
+  [javadoc] scanning C:\Users\Admin\Desktop\somename\javadoctask for packages.
+--- MESSAGE LOGGED
+dirset: Setup scanner in dir C:\Users\Admin\Desktop\somename\javadoctask with patternSet{ includes: [**] excludes: [] }
+--- MESSAGE LOGGED
+  [javadoc] C:\Users\Admin\Desktop\somename\javadoctask contains source files in the default package, you must specify them as source files not packages.
+--- MESSAGE LOGGED
+  [javadoc] C:\Users\Admin\Desktop\somename\javadoctask doesn't contain any packages, dropping it.
+--- MESSAGE LOGGED
+fileset: Setup scanner in dir C:\Users\Admin\Desktop\somename\javadoctask with patternSet{ includes: [**/*.java] excludes: [] }
+--- MESSAGE LOGGED
+  [javadoc] Generating Javadoc
+--- MESSAGE LOGGED
+dropping C:\Users\Admin\Desktop\somename\javadoctask\C:\Program Files\Java\jdk-9.0.4\jre\lib from path as it doesn't exist
+--- MESSAGE LOGGED
+  [javadoc] Executing 'C:\Program Files\Java\jdk-9.0.4\bin\javadoc.exe' with arguments:
+'-d'
+'C:\Users\Admin\Desktop\somename\javadoctask\docdir'
+'-doctitle'
+'
+				<h1>Test</h1>
+			'
+'-bottom'
+'
+				<i>Copyright &#169; 2000 Dummy Corp. All Rights Reserved.</i>
+			'
+'-classpath'
+'E:\apache-ant-1.10.4\lib\ant-launcher.jar;C:\Program Files\Java\jdk-9.0.4\lib;E:\apache-tomcat-9.0.7\lib\servlet-api.jar;E:\apache-ant-1.10.4\lib\ant-antlr.jar;E:\apache-ant-1.10.4\lib\ant-apache-bcel.jar;E:\apache-ant-1.10.4\lib\ant-apache-bsf.jar;E:\apache-ant-1.10.4\lib\ant-apache-log4j.jar;E:\apache-ant-1.10.4\lib\ant-apache-oro.jar;E:\apache-ant-1.10.4\lib\ant-apache-regexp.jar;E:\apache-ant-1.10.4\lib\ant-apache-resolver.jar;E:\apache-ant-1.10.4\lib\ant-apache-xalan2.jar;E:\apache-ant-1.10.4\lib\ant-commons-logging.jar;E:\apache-ant-1.10.4\lib\ant-commons-net.jar;E:\apache-ant-1.10.4\lib\ant-jai.jar;E:\apache-ant-1.10.4\lib\ant-javamail.jar;E:\apache-ant-1.10.4\lib\ant-jdepend.jar;E:\apache-ant-1.10.4\lib\ant-jmf.jar;E:\apache-ant-1.10.4\lib\ant-jsch.jar;E:\apache-ant-1.10.4\lib\ant-junit.jar;E:\apache-ant-1.10.4\lib\ant-junit4.jar;E:\apache-ant-1.10.4\lib\ant-junitlauncher.jar;E:\apache-ant-1.10.4\lib\ant-netrexx.jar;E:\apache-ant-1.10.4\lib\ant-swing.jar;E:\apache-ant-1.10.4\lib\ant-testutil.jar;E:\apache-ant-1.10.4\lib\ant-xz.jar;E:\apache-ant-1.10.4\lib\ant.jar;E:\apache-ant-1.10.4\lib\bcel-6.2.jar'
+'-version'
+'-author'
+'-sourcepath'
+'C:\Users\Admin\Desktop\somename\javadoctask'
+'C:\Users\Admin\Desktop\somename\javadoctask\JavaComments.java'
+
+The ' characters around the executable and arguments are
+not part of the command.
+--- MESSAGE LOGGED
+  [javadoc] Javadoc execution
+--- MESSAGE LOGGED
+Execute:Java13CommandLauncher: Executing 'C:\Program Files\Java\jdk-9.0.4\bin\javadoc.exe' with arguments:
+'-d'
+'C:\Users\Admin\Desktop\somename\javadoctask\docdir'
+'-doctitle'
+'
+				<h1>Test</h1>
+			'
+'-bottom'
+'
+				<i>Copyright &#169; 2000 Dummy Corp. All Rights Reserved.</i>
+			'
+'-classpath'
+'E:\apache-ant-1.10.4\lib\ant-launcher.jar;C:\Program Files\Java\jdk-9.0.4\lib;E:\apache-tomcat-9.0.7\lib\servlet-api.jar;E:\apache-ant-1.10.4\lib\ant-antlr.jar;E:\apache-ant-1.10.4\lib\ant-apache-bcel.jar;E:\apache-ant-1.10.4\lib\ant-apache-bsf.jar;E:\apache-ant-1.10.4\lib\ant-apache-log4j.jar;E:\apache-ant-1.10.4\lib\ant-apache-oro.jar;E:\apache-ant-1.10.4\lib\ant-apache-regexp.jar;E:\apache-ant-1.10.4\lib\ant-apache-resolver.jar;E:\apache-ant-1.10.4\lib\ant-apache-xalan2.jar;E:\apache-ant-1.10.4\lib\ant-commons-logging.jar;E:\apache-ant-1.10.4\lib\ant-commons-net.jar;E:\apache-ant-1.10.4\lib\ant-jai.jar;E:\apache-ant-1.10.4\lib\ant-javamail.jar;E:\apache-ant-1.10.4\lib\ant-jdepend.jar;E:\apache-ant-1.10.4\lib\ant-jmf.jar;E:\apache-ant-1.10.4\lib\ant-jsch.jar;E:\apache-ant-1.10.4\lib\ant-junit.jar;E:\apache-ant-1.10.4\lib\ant-junit4.jar;E:\apache-ant-1.10.4\lib\ant-junitlauncher.jar;E:\apache-ant-1.10.4\lib\ant-netrexx.jar;E:\apache-ant-1.10.4\lib\ant-swing.jar;E:\apache-ant-1.10.4\lib\ant-testutil.jar;E:\apache-ant-1.10.4\lib\ant-xz.jar;E:\apache-ant-1.10.4\lib\ant.jar;E:\apache-ant-1.10.4\lib\bcel-6.2.jar'
+'-version'
+'-author'
+'-sourcepath'
+'C:\Users\Admin\Desktop\somename\javadoctask'
+'C:\Users\Admin\Desktop\somename\javadoctask\JavaComments.java'
+
+The ' characters around the executable and arguments are
+not part of the command.
+--- MESSAGE LOGGED
+  [javadoc] Loading source file C:\Users\Admin\Desktop\somename\javadoctask\JavaComments.java...
+--- MESSAGE LOGGED
+  [javadoc] Constructing Javadoc information...
+--- MESSAGE LOGGED
+  [javadoc] Creating destination directory: "C:\Users\Admin\Desktop\somename\javadoctask\docdir\"
+--- MESSAGE LOGGED
+  [javadoc] Standard Doclet version 9.0.4
+--- MESSAGE LOGGED
+  [javadoc] Building tree for all the packages and classes...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\JavaComments.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\package-frame.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\package-summary.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\package-tree.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\constant-values.html...
+--- MESSAGE LOGGED
+  [javadoc] Building index for all the packages and classes...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\overview-tree.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\index-all.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\deprecated-list.html...
+--- MESSAGE LOGGED
+  [javadoc] Building index for all classes...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\allclasses-frame.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\allclasses-frame.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\allclasses-noframe.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\allclasses-noframe.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\index.html...
+--- MESSAGE LOGGED
+  [javadoc] Generating C:\Users\Admin\Desktop\somename\javadoctask\docdir\help-doc.html...
+<<< TASK FINISHED -- org.apache.tools.ant.UnknownElement@15ff3e9e
+<< TARGET FINISHED -- default
+default:  duration 2 seconds
+< BUILD FINISHED
+
+BUILD SUCCESSFUL

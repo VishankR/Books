@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project basedir="." name="AntProject" default="default">
+	<record name="build.log" loglevel="debug" append="false"/>
+	<property name="source.dir" value="." />
+	<property name="doc.dir" value="./docdir" />
+
+	<target name="default">
+		<delete dir="${doc.dir}" />
+		<javadoc sourcepath="${source.dir}" destdir="${doc.dir}">
+			<fileset dir="."/>
+
+			<doctitle>
+				<![CDATA[<h1>Test</h1>]]>
+			</doctitle>
+			<bottom>
+				<![CDATA[<i>Copyright &#169; 2000 Dummy Corp. All Rights Reserved.</i>]]>
+			</bottom>
+
+		</javadoc>
+	</target>
+</project>

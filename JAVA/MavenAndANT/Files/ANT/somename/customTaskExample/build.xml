@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test" basedir="." default="test">
+
+	<taskdef name="customanttask" classname="myOwn.MyCustomTask" classpath="myown.jar"/>
+
+
+	<target name="test">
+		<customanttask/>
+	</target>
+
+</project>

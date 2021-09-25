@@ -1,0 +1,30 @@
+Archetype Catalog XML
+=====================
+http://repo1.maven.org/maven2/archetype-catalog.xml
+
+Create a Maven Project From Command Line:
+========================================
+mvn archetype:generate -DgroupId=com.companyname -DartifactId=my-first-proj -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Get effective POM
+=================
+mvn help:effective-pom
+
+Guide to upload artifacts to central repository
+===============================================
+https://maven.apache.org/repository/guide-central-repository-upload.html
+
+Steps to setup your own repository 
+==================================
+(Note : This is just to give a rough idea on how to setup maven repository. You really don't need to try. As this is meant for organizations. More over, it demands high performance handling hardware. So, better not try, but just try to understand)
+
+https://www.jfrog.com/confluence/display/RTF/Installing+on+Linux+Solaris+or+Mac+OS#InstallingonLinuxSolarisorMacOS-SettingJavaMemoryParameters
+
+
+Pre-defined Maven Properties
+============================
+https://github.com/cko/predefined_maven_properties/blob/master/README.md
+
+Set Maven Options
+=================
+MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128m"

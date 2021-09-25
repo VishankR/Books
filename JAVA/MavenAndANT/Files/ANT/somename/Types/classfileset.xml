@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project basedir="."
+         name="AntProject"
+         default="test">
+
+	<description>
+		Use '-projecthelp' in command line to display this project description.
+	</description>
+
+	<patternset id="patternset">
+		<include name="*.class" />
+		<include name="*.jar" />
+	</patternset>
+
+	<classfileset id="reqdClasses"
+	              dir=".">
+		<root classname="Test"/>
+	</classfileset>
+
+	<target name="clean">
+		<delete>
+			<fileset dir=".">
+				<patternset refid="patternset"/>
+			</fileset>
+		</delete>
+	</target>
+
+
+	<target name="compile"
+	        depends="clean">
+		<javac srcdir="."
+		       includeantruntime="true"
+		       includes="HelloWorld.java,Test.java"
+		       destdir=".">
+			<classpath>
+				<pathelement path="."/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="test"
+	        depends="compile">
+		<jar destfile="myclasses.jar">
+			<fileset refid="reqdClasses"/>
+		</jar>
+	</target>
+
+</project>
