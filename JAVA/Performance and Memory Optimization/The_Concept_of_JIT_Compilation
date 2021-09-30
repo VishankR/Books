@@ -1,0 +1,26 @@
+1.  So initially, the JVM acts like any other interpreter running each line of code as it is needed. However, by default, 
+    this would make the code execution somewhat slow.
+2.  Certainly, if you compare this to code written in a language like C, which would be compiled to native
+    machine code (the way that this kind of language works is that the code is compiled into a runnable
+    format the operating system can comprehend directly. It doesn't need any additional software to interpret or run it.
+    This makes it quick to run compared to interpreted languages.), we lose the write once, run anywhere feature of Java.
+3.  So to help get around this problem of slower execution and interpreted languages than compiled languages,
+    the Java Virtual Machine has a feature called Just in Time compilation or JIT compilation for short
+    for JVM will monitor which branches of code are run the most often. Which methods or parts of methods, specifically loops, 
+    are executed the most frequently. And then the virtual machine can decide, for example, that a particular method is being used a lot. And so code execution would be speeded up if that method was compiled to native machine code.
+4.  So at this point, some of our application is being run in interpretive mode as bytecode and some is
+    no longer bytecode, but is running as compiled native machine code.
+    The part that has been compiled to native machine code will run faster than the bytecode interpreted part.
+    Just to be clear them by native machine code, we mean executable code that can be understood directly by your operating system.
+    So if you're running this application on Windows, part of the bytecode has been compiled into code
+    that can be natively understood by the Windows operating system.
+    If we were running on a Mac, then the JVM would have compiled this to native Mac code.
+    The native Windows code and the native Mac code would of course, be different. They're not compatible.
+5.  The process of compiling converting the bytecode to native machine code is run in a separate thread.
+    The virtual machine is, of course, a multithreaded application itself.
+    So the thread within the virtual machine responsible for running the code that is interpreting the code
+    and executing the bytecode won't be affected by the thread doing compiling.
+    So the process of compiling doesn't stop the application running.
+    While the compilation is taking place, the JVM will continue to use the interpreted version.
+    But once that compilation is complete and the native machine code version is available, well, then
+    the virtual machine will seamlessly switch to use the compiler version instead of the more bytecode.
