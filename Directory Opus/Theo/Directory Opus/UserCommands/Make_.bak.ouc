@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<usercommand backcol="none" hide_from_menu="no" textcol="none">
+	<label>Make_.bak</label>
+	<icon1>#makedir</icon1>
+	<function type="script">
+		<instruction>@script JScript</instruction>
+		<instruction>// Button that creates &apos;.bak&apos; backups for any number of selected files. If a .bak already exists for a file, it will create .bak2, .bak3 and so on.</instruction>
+		<instruction>// By ThioJoe</instruction>
+		<instruction>// Updated: 8/1/22</instruction>
+		<instruction />
+		<instruction>function OnClick(clickData) {</instruction>
+		<instruction>	// You can change the backup extension base string to be whatever you want here. Must include period.</instruction>
+		<instruction>	// Default = &apos;.bak&apos;</instruction>
+		<instruction>	backupExtension = &apos;.bak&apos;</instruction>
+		<instruction>	////////////////////////////////////////////////////////////////////////</instruction>
+		<instruction />
+		<instruction>	function createBak(fileItem) {</instruction>
+		<instruction>		lastBakNum = 0;</instruction>
+		<instruction>		// Create item object of selected file</instruction>
+		<instruction>		selectedFile = fileItem;</instruction>
+		<instruction>		//Get name of selected file</instruction>
+		<instruction>		selectedFileFullName = String(selectedFile.name);</instruction>
+		<instruction>		selectedFileExt = String(selectedFile.ext);</instruction>
+		<instruction>		selectedFileNameStem = String(selectedFile.name_stem);</instruction>
+		<instruction>		</instruction>
+		<instruction>		//Go through filenames in folder, if any contains fileFullName.bak, check if # at end is larger than current, if so record into lastBakNum</instruction>
+		<instruction>		enumFiles.moveFirst();</instruction>
+		<instruction>		while (enumFiles.atEnd() == false) {</instruction>
+		<instruction>			currentFileName = String(enumFiles.item().name)</instruction>
+		<instruction>			currentFileNameExt = String(enumFiles.item().ext)</instruction>
+		<instruction>				</instruction>
+		<instruction>			// Checks if stem of currently scanned file is same as selected file with .bak added</instruction>
+		<instruction>			theoreticalBakName = selectedFileFullName + backupExtension;</instruction>
+		<instruction>			theoreticalBakNameLength = theoreticalBakName.length;</instruction>
+		<instruction>			</instruction>
+		<instruction>			//Checking if the currently scanned file is already a .bak file of the selected file</instruction>
+		<instruction>			//By checking if scanned file contains selected file name + bak, from beginning</instruction>
+		<instruction>			if (currentFileName.substr(0, theoreticalBakNameLength) == theoreticalBakName) {</instruction>
+		<instruction>				//Checks if extension is .bak or .bak*</instruction>
+		<instruction>				if (currentFileNameExt.substr(0,backupExtensionLength) == backupExtension) {</instruction>
+		<instruction>					// If existing backup file extension is exactly .bak with nothing after, set lastBakNum to 1, so next one will be .bak2, not .bak1 (.bak1 could be  with .bak)</instruction>
+		<instruction>					if (currentFileNameExt == backupExtension) {</instruction>
+		<instruction>						if (lastBakNum == 0) {</instruction>
+		<instruction>							lastBakNum = 1;</instruction>
+		<instruction>						}</instruction>
+		<instruction>					} </instruction>
+		<instruction>					// If it starts with .bak but has something after .bak</instruction>
+		<instruction>					else {</instruction>
+		<instruction>						// Gets text or number after &quot;.bak&quot;, which should be a number</instruction>
+		<instruction>						extEnding = currentFileNameExt.substr(backupExtensionLength);</instruction>
+		<instruction>						//Checks if anything after .bak is not a number</instruction>
+		<instruction>						if (isNaN(extEnding) == false) {</instruction>
+		<instruction>							// Parse the ending number into an integer in base 10</instruction>
+		<instruction>							extEndingNum = parseInt(extEnding, 10);</instruction>
+		<instruction>							// Only update lastBakNum if it is the largest .bak # found so far</instruction>
+		<instruction>							if (extEndingNum &gt; lastBakNum) {</instruction>
+		<instruction>								lastBakNum = extEndingNum;</instruction>
+		<instruction>							}</instruction>
+		<instruction>						}</instruction>
+		<instruction>					}</instruction>
+		<instruction>				}</instruction>
+		<instruction>			}</instruction>
+		<instruction>			enumFiles.moveNext();</instruction>
+		<instruction>		}</instruction>
+		<instruction>		</instruction>
+		<instruction>		// If there is no already existing .bak or .bak# of the selected file, create them</instruction>
+		<instruction>		if (lastBakNum == 0) {</instruction>
+		<instruction>			commandString = &apos;Copy DUPLICATE &quot;&apos; + selectedFile + &apos;&quot; AS *&apos; + backupExtension;</instruction>
+		<instruction>			clickData.func.command.RunCommand(commandString);</instruction>
+		<instruction>		}</instruction>
+		<instruction>		else {</instruction>
+		<instruction>			newBakNum = lastBakNum + 1;</instruction>
+		<instruction>			commandString = &apos;Copy DUPLICATE &quot;&apos; + selectedFile + &apos;&quot; AS *&apos; + backupExtension + newBakNum;</instruction>
+		<instruction>			clickData.func.command.RunCommand(commandString);</instruction>
+		<instruction>		}</instruction>
+		<instruction>	}</instruction>
+		<instruction>	</instruction>
+		<instruction>	// Get data about selected files, and rest of the files in the folder</instruction>
+		<instruction>	allSelectedFiles = clickData.func.sourcetab.selected_files;</instruction>
+		<instruction>	enumSelectedFiles = new Enumerator(allSelectedFiles);</instruction>
+		<instruction>	enumFiles = new Enumerator(clickData.func.sourcetab.files);  //Enumerate all files in folder. Does this before any bak files are created to save unecessary checking later</instruction>
+		<instruction>	backupExtensionLength = backupExtension.length;</instruction>
+		<instruction />
+		<instruction>	// Runs the main function for each selected file</instruction>
+		<instruction>	enumSelectedFiles.moveFirst();</instruction>
+		<instruction>	while (enumSelectedFiles.atEnd() == false) {</instruction>
+		<instruction>		currentFile = enumSelectedFiles.item()</instruction>
+		<instruction>		createBak(currentFile);</instruction>
+		<instruction>		enumSelectedFiles.moveNext();</instruction>
+		<instruction>	}</instruction>
+		<instruction>}</instruction>
+	</function>
+</usercommand>

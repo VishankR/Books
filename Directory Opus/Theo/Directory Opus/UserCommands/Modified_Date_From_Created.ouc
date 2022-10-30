@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<usercommand backcol="none" hide_from_menu="no" textcol="none">
+	<label>Modified_Date_From_Created</label>
+	<icon1>#setdate</icon1>
+	<function type="normal">
+		<instruction>SetAttr MODIFIED=created </instruction>
+	</function>
+</usercommand>

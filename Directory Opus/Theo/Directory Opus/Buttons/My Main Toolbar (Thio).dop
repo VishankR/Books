@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolbar version="12.29">
+	<wallpaper enabled="yes" inheritable="yes" type="tile">
+		<std_type>toolbar</std_type>
+	</wallpaper>
+	<buttons backcol="none" display="label" textcol="none" type="menu">
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>New Folder</label>
+			<tip>Create a new folder</tip>
+			<icon1>#makedir</icon1>
+			<function type="normal">
+				<instruction>CreateFolder</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Undo</label>
+			<tip>Undo the previous file action (copy, delete, rename, move, etc)</tip>
+			<icon1>#undo</icon1>
+			<function type="normal">
+				<instruction>Undo</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Refresh</label>
+			<tip>Refresh the contents of the current folder</tip>
+			<icon1>#refresh</icon1>
+			<function type="normal">
+				<instruction>Go REFRESH</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="label" field_type="spacer" size="full" textcol="none">
+			<label>Spacer</label>
+			<icon1>#spacer</icon1>
+			<function type="normal">
+				<instruction>Set SPACER</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none" type="menu">
+			<label>Tab Groups</label>
+			<icon1>#foldertabgrouplist</icon1>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>Tab Groups</label>
+				<tip>Displays a list of your Folder Tab Groups</tip>
+				<icon1>#foldertabgrouplist</icon1>
+				<function type="normal">
+					<instruction>Prefs PAGE=tabgroups</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="label" textcol="none">
+				<label>Go TABGROUPLIST</label>
+				<function type="normal">
+					<instruction>Go TABGROUPLIST</instruction>
+				</function>
+			</button>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Toggle Flat View</label>
+			<tip>Toggle Flat View on or off (to display the contents of all sub-folders)</tip>
+			<icon1>#flatview</icon1>
+			<function type="normal">
+				<instruction>Set FLATVIEW=Toggle</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Get Sizes</label>
+			<tip>Calculate the byte sizes of selected folders</tip>
+			<icon1>#getsizes</icon1>
+			<function type="normal">
+				<instruction>GetSizes</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Format Lock</label>
+			<tip>Lock or unlock the current format in the Lister</tip>
+			<icon1>#formatlock</icon1>
+			<function type="normal">
+				<instruction>Set FORMATLOCK=Toggle</instruction>
+			</function>
+		</button>
+	</buttons>
+</toolbar>

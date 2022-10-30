@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolbar version="12.29">
+	<wallpaper enabled="yes" inheritable="yes" type="share">
+		<std_type>filedisplay</std_type>
+	</wallpaper>
+	<buttons backcol="none" display="label" textcol="none" type="menu">
+		<button backcol="none" display="icon" hotkey="alt+left" icon_size="large" label_pos="right" textcol="none" timed="yes" type="menu_button">
+			<label>&amp;Back</label>
+			<tip>Go back to %1</tip>
+			<icon1>#MetroBlack:goback</icon1>
+			<function type="normal">
+				<instruction>Go BACK USEQUALKEYS</instruction>
+			</function>
+			<button backcol="none" display="label" label_pos="right" textcol="none">
+				<label>Back</label>
+				<tip>Go back to the previous folder in the history (with drop-down list)</tip>
+				<function type="normal">
+					<instruction>Go BACKLIST</instruction>
+				</function>
+			</button>
+		</button>
+		<button backcol="none" display="icon" hotkey="alt+right" icon_size="large" label_pos="right" textcol="none" timed="yes" type="menu_button">
+			<label>Forward</label>
+			<tip>Go forward to %1</tip>
+			<icon1>#MetroBlack:goforward</icon1>
+			<function type="normal">
+				<instruction>Go FORWARD USEQUALKEYS</instruction>
+			</function>
+			<button backcol="none" display="label" label_pos="right" textcol="none">
+				<label>Forward</label>
+				<tip>Go forward to the next folder in the history (with drop-down list)</tip>
+				<function type="normal">
+					<instruction>Go FORWARDLIST</instruction>
+				</function>
+			</button>
+		</button>
+		<button always_enable="yes" backcol="none" display="icon" icon_size="large" label_pos="right" textcol="none" timed="yes" type="menu_button">
+			<label>&amp;Go Up</label>
+			<tip>Go up to %1</tip>
+			<icon1>#MetroBlack:goup</icon1>
+			<function type="normal">
+				<instruction>Go UP BACK USEQUALKEYS</instruction>
+			</function>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Go To Root</label>
+				<tip>Load the root folder of the current folder</tip>
+				<icon1>#goroot</icon1>
+				<function type="normal">
+					<instruction>Go ROOT USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Parent in New Lister</label>
+				<tip>Parent to %1 (new lister)</tip>
+				<icon1>#goupnewlister</icon1>
+				<function type="normal">
+					<instruction>Go UP NEW</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" separate="yes" textcol="none">
+				<label>P&amp;arent in New Tab</label>
+				<tip>Parent to %1 (new tab)</tip>
+				<icon1>#goupnewtab</icon1>
+				<function type="normal">
+					<instruction>Go UP NEWTAB</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" separate="yes" textcol="none" type="menu">
+				<label>&amp;Recent Locations</label>
+				<icon1>#recentlist</icon1>
+				<button backcol="none" display="label" label_pos="right" separate="yes" textcol="none">
+					<label>&amp;Clear Recent List</label>
+					<tip>Clears the list of the most recently visited folders</tip>
+					<function type="normal">
+						<instruction>Recent CLEAR</instruction>
+					</function>
+				</button>
+				<button backcol="none" display="label" label_pos="right" textcol="none">
+					<label>&amp;Recent Locations</label>
+					<tip>Shows your most recently visited folders</tip>
+					<function type="normal">
+						<instruction>Recent SHOWICONS USEQUALKEYS</instruction>
+					</function>
+				</button>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Desktop</label>
+				<icon1>#godesktop</icon1>
+				<function type="normal">
+					<instruction>Go /desktop USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>D&amp;ocuments</label>
+				<icon1>#gomydocuments</icon1>
+				<function type="normal">
+					<instruction>Go /mydocuments USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Libraries</label>
+				<icon1>#golibraries</icon1>
+				<function type="normal">
+					<instruction>Go lib:// USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Computer</label>
+				<icon1>#gomycomputer</icon1>
+				<function type="normal">
+					<instruction>Go /mycomputer USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Network</label>
+				<icon1>#gonetwork</icon1>
+				<function type="normal">
+					<instruction>Go /network USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;FTP</label>
+				<icon1>#ftpconnect</icon1>
+				<function type="normal">
+					<instruction>Go ftp:// USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>F&amp;ile Collections</label>
+				<icon1>#gocollection</icon1>
+				<function type="normal">
+					<instruction>Go coll:// USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" separate="yes" textcol="none">
+				<label>R&amp;ecycle Bin</label>
+				<icon1>#gotrash</icon1>
+				<function type="normal">
+					<instruction>Go /trash USEQUALKEYS</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" hotkey="f5" label_pos="right" textcol="none">
+				<label>Refre&amp;sh\tF5</label>
+				<tip>Refresh the contents of the current folder</tip>
+				<icon1>#refresh</icon1>
+				<function type="normal">
+					<instruction>Go REFRESH=source</instruction>
+				</function>
+			</button>
+		</button>
+		<button backcol="none" display="icon" field_type="path_treepath" label_pos="right" size="full" textcol="none">
+			<label>Location</label>
+			<tip>Displays the current folder path, and lets you move to a new folder by typing the path in (with drop-down recent list)</tip>
+			<template>driveroot,hidedesktopfolders,hidefavorites,size=0+0+0+3+3</template>
+			<hotkeys>
+				<key>f4</key>
+				<key>alt+D</key>
+				<key>ctrl+L</key>
+			</hotkeys>
+			<function type="normal">
+				<instruction>Go PATHFIELDPATHTREE</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="icon" dpi="150" field_type="search" hotkey="f3" label_pos="right" size="302" textcol="none">
+			<label>Search</label>
+			<tip>Displays a quick search field letting you search the current folder</tip>
+			<function type="normal">
+				<instruction>Go QUERYFIELD</instruction>
+			</function>
+		</button>
+	</buttons>
+</toolbar>

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefs opus_version_beta="0" opus_version_major="12" opus_version_minor="29" version="6">
+	<fileop flags1="0x8002802c086e7" flags2="0x20000002" jobs_button_width="165" jobs_button_width2="165,0,150" secure_delete="3" upload_modified_time="20" />
+	<flags misc="0xa01" powermode="0x9001,0xa040,0x8080" settings1="0xc00400440209b8" settings2="0x1c0000621901420" settings3="0x2003000010600090" settings4="0x8300402801504" settings5="0x5e08000194412241" settings6="0x80000000000" />
+	<timing dblclkhighlight="3" hover="1000" progress="800" slideout="400" tabtofront="1000" toolbarslidehide="200" toolbarslideprehide="500" toolbarslideprereveal="0" toolbarslidereveal="100" tooltip="750" />
+	<blending drag="50" file="75" graph="40" nofocus="50" nofocus_tree="50" select="33" />
+	<smtp>
+		<server />
+		<port>25</port>
+		<user />
+		<pass />
+		<email>name@example.com</email>
+		<name>Name</name>
+		<max_threads>1</max_threads>
+	</smtp>
+	<gridlines details="#d2d2d2" details_v="#d2d2d2" detailspadding="5" detailspadding_dpi="150" detailsthumbfill="0xffffff" opacity="0x4b4b" opacity_v="0x3232" power="#d2d2d2" power_v="#d2d2d2" powerpadding="2" powerpadding_dpi="150" powerthumbfill="0xffffff" spacing="257" style="514" style_v="0" thumbcolratio="0" />
+	<status>
+		<single>{i:dir}  {sd} / {td} {||}{i:file}  {sf} / {tf} {||}{h!} &lt;#FF0000&gt;&lt;b&gt;{hi} hidden&lt;/b&gt;&lt;/#&gt; {h!}{||}{h!} &lt;#008800&gt;&lt;b&gt;{hse}&lt;/b&gt;&lt;/#&gt; {h!}{||} {sba} / {tba} {rpad}{||}{h!} {ls} {h!}{||}{fl}{||}{h!} {df} {bg+w=50,f=2,g=3,t=n,c1=#68f040,c2=#f06840}{h!}</single>
+		<dual>{i:dir}  {sdL} / {tdL} {||}{i:file}  {sfL} / {tfL} {||}{h!L} &lt;#FF0000&gt;&lt;b&gt;{hiL} hidden&lt;/b&gt;&lt;/#&gt; {h!L}{||}{h!L} &lt;#008800&gt;&lt;b&gt;{hseL}&lt;/b&gt;&lt;/#&gt; {h!L}{||} {sbaL} / {tbaL} {||}{h!L} {dfL} {bgL+w=50,f=2,g=3,t=n,c1=#68f040,c2=#f06840} {h!L}{rleft-}{||}{i:dir}  {sdR} / {tdR} {||}{i:file}  {sfR} / {tfR} {||}{h!R} &lt;#FF0000&gt;&lt;b&gt;{hiR} hidden&lt;/b&gt;&lt;/#&gt; {h!R}{||}{h!R} &lt;#008800&gt;&lt;b&gt;{hseR}&lt;/b&gt;&lt;/#&gt; {h!R}{||} {sbaR} / {tbaR} {rpad}{||}{h!R} {dfR} {bgR+w=50,f=2,g=3,t=n,c1=#68f040,c2=#f06840}{h!R}{||}{fl}</dual>
+		<left>{i:dir}  {sd} / {td} {||}{i:file}  {sf} / {tf} {||}{h!} &lt;#FF0000&gt;&lt;b&gt;{hi} hidden&lt;/b&gt;&lt;/#&gt; {h!}{||}{h!} &lt;#008800&gt;&lt;b&gt;{hse}&lt;/b&gt;&lt;/#&gt; {h!}{||} {sba} / {tba} {rpad}{||}{h!} {ls} {h!}{||}{fl}{||}{h!} {df} {bg+w=50,f=2,g=3,t=n,c1=#68f040,c2=#f06840}{h!}</left>
+		<right>{i:dir}  {sd} / {td} {||}{i:file}  {sf} / {tf} {||}{h!} &lt;#FF0000&gt;&lt;b&gt;{hi} hidden&lt;/b&gt;&lt;/#&gt; {h!}{||}{h!} &lt;#008800&gt;&lt;b&gt;{hse}&lt;/b&gt;&lt;/#&gt; {h!}{||} {sba} / {tba} {rpad}{||}{h!} {ls} {h!}{||}{fl}{||}{h!} {df} {bg+w=50,f=2,g=3,t=n,c1=#68f040,c2=#f06840}{h!}</right>
+		<tortoise_set>XPStyle</tortoise_set>
+	</status>
+	<tree>
+		<actions>
+			<lmb_alt>Go NEWTAB</lmb_alt>
+			<lmb_ctrl>Go OPENINDUAL</lmb_ctrl>
+			<mmb_normal>Go NEWTAB</mmb_normal>
+			<mmb_ctrl>Go NEWTAB OPENINDUAL</mmb_ctrl>
+			<lmb_normal>Go</lmb_normal>
+		</actions>
+	</tree>
+	<fonts>
+		<files>Segoe UI/-18,400,0,0,0,1,0,150,9</files>
+		<tree>Segoe UI/-18,400,0,0,0,1,0,150,9</tree>
+		<status>Segoe UI/-18,400,0,0,0,1,0,150,9</status>
+		<header>Segoe UI/-18,400,0,0,0,1,0,150,9</header>
+		<thumbnails>Segoe UI/-18,400,0,0,0,1,0,150,9</thumbnails>
+		<foldertabs>Segoe UI/-18,400,0,0,0,1,0,150,9</foldertabs>
+		<fdb>Segoe UI/-18,600,0,0,0,1,0,150,9</fdb>
+		<log>Courier New/-18,400,0,0,0,1,0,150,9</log>
+		<groups>Segoe UI/-22,400,0,0,0,1,0,150,11</groups>
+		<panelnc>Segoe UI/-18,400,0,0,0,1,0,150,9</panelnc>
+		<jobsbar>Segoe UI/-18,400,0,0,0,1,0,150,9</jobsbar>
+		<metapane>Segoe UI/-18,400,0,0,0,1,0,150,9</metapane>
+		<renamemacro>Consolas/-18,400,0,0,0,1,0,150,9</renamemacro>
+		<infotips>Segoe UI/-18,400,0,0,0,1,0,150,9</infotips>
+		<code>Consolas/-18,400,0,0,0,1,0,150,9</code>
+	</fonts>
+	<colors color_enable="0xa0000800" color_enable_defaults="0x182400080021800" color_enable_values="0x1824000a0000800" treesel_highlight="#ff7f00" treesel_highshadow="#3f007f" version="12">
+		<files>
+			<unselected bg="none" fg="#000000" />
+			<dirs>
+				<unselected bg="none" fg="#000000" />
+				<selected bg="#316ac5" fg="#ffffff" />
+				<compressed>
+					<unselected bg="none" fg="none" />
+					<selected bg="none" fg="none" />
+				</compressed>
+				<encrypted>
+					<unselected bg="none" fg="none" />
+					<selected bg="none" fg="none" />
+				</encrypted>
+				<system>
+					<unselected bg="none" fg="none" />
+					<selected bg="none" fg="none" />
+				</system>
+				<compatibility>
+					<unselected bg="none" fg="none" />
+					<selected bg="none" fg="none" />
+				</compatibility>
+				<match>
+					<unselected bg="#ffff00" fg="none" />
+					<selected bg="#ffff00" fg="none" />
+				</match>
+			</dirs>
+			<selected bg="#316ac5" fg="#ffffff" />
+			<compressed>
+				<unselected bg="none" fg="#99006f" />
+				<selected bg="#316ac5" fg="#ffe3f8" />
+			</compressed>
+			<encrypted>
+				<unselected bg="none" fg="#2d792b" />
+				<selected bg="#316ac5" fg="#d7f2d7" />
+			</encrypted>
+			<system>
+				<unselected bg="none" fg="#e40000" />
+				<selected bg="#316ac5" fg="#fff1ae" />
+			</system>
+			<match>
+				<frame bg="none" fg="#ffaa00" />
+				<unselected bg="#ffff00" fg="none" />
+				<selected bg="#ffff00" fg="none" />
+			</match>
+			<favorites>
+				<unselected bg="#ffbdbd" fg="#0000a8" />
+				<selected bg="#316ac5" fg="#ffffff" />
+			</favorites>
+			<error>
+				<unselected bg="#ff4040" fg="#480000" />
+				<selected bg="#316ac5" fg="#840000" />
+			</error>
+			<compatibility>
+				<unselected bg="none" fg="#733f04" />
+				<selected bg="#316ac5" fg="#fde4ca" />
+			</compatibility>
+			<groupheader bg="#c8c8c8" fg="#1e3287" />
+		</files>
+		<background bg="#ffffff" fg="#000000">
+			<off bg="none" fg="none" />
+			<dest bg="none" fg="none" />
+			<filtered bg="none" fg="none" />
+			<filtereddest bg="none" fg="none" />
+		</background>
+		<caption>
+			<source>
+				<active bg="#6c98c8" fg="#f4f4f4" />
+				<inactive bg="#aac2db" fg="#ffffff" />
+				<text bg="#cdcdcd" fg="#000000" />
+			</source>
+			<dest>
+				<active bg="#c7c6ca" fg="#ffffff" />
+				<inactive bg="#b0b0b0" fg="#ffffff" />
+				<text bg="#cdcdcd" fg="#969696" />
+			</dest>
+			<off>
+				<active bg="#d3daed" fg="#f1f3fa" />
+				<inactive bg="#d3daed" fg="#d3daed" />
+				<text bg="#686868" fg="#000000" />
+			</off>
+		</caption>
+		<tree bg="#ffffff" fg="#000000">
+			<text>
+				<unselected bg="none" fg="#000000" />
+				<selected bg="#0078d7" fg="#ffffff" />
+			</text>
+			<dest bg="#ffffff" fg="#000000">
+				<text>
+					<unselected bg="none" fg="#000000" />
+					<selected bg="#0078d7" fg="#ffffff" />
+				</text>
+			</dest>
+		</tree>
+		<statusbar bg="#ffffff" fg="#000000" />
+		<graphs>
+			<relative_size bg="#26a0da" fg="#26a0da" />
+			<relative_age bg="#daa026" fg="#daa026" />
+		</graphs>
+		<toolbar bg="#ffffff" fg="#000000" />
+		<tabs bg="#ffffff" fg="#000000">
+			<unselected bg="#ffffff" fg="#555555" />
+			<selected bg="#ffffff" fg="#000000" />
+			<hot bg="#8dc7f8" fg="#ffffff" />
+		</tabs>
+		<metapane>
+			<text bg="none" fg="#000000" />
+			<back bg="#f0f0f0" fg="#ffffff" />
+		</metapane>
+		<panelnc>
+			<textandbg bg="#f0f0f0" fg="#000000" />
+			<borders bg="#a0a0a0" fg="#a0a0a0" />
+			<links bg="#6d6d6d" fg="#0066cc" />
+		</panelnc>
+		<toolbars>
+			<seps bg="#d2d3d5" fg="#d2d3d5" />
+		</toolbars>
+		<lightbulb dest="#fb2904" dual="#0080ff" off="#e1e1e1" source="#f6c73c" />
+		<rel_graph_extra file_rel_date_back="none" file_rel_date_frame="none" file_rel_size_back="none" file_rel_size_frame="none" folder_rel_date_back="none" folder_rel_date_frame="none" folder_rel_size_back="none" folder_rel_size_frame="none" />
+		<free_space_graph back="#e6e6e6" bar_normal="#26a0da" bar_warning="#da2626" enable="no" frame="#bcbcbc" />
+		<toolbar_extra menu_back="none" menu_frame_inner="#ffffff" menu_frame_outer="#a0a0a0" path_field_bg="none" path_field_glyph="none" selected="none" toggled="none" />
+		<folder_tree_extra glyph="none" glyph_hot="none">
+			<dest glyph="none" glyph_hot="none" />
+		</folder_tree_extra>
+		<group_header_extra glyph="none" glyph_hot="none" />
+		<group_column frame="none" gradient_bottom="#276cc8" gradient_top="#276cc8" text="#ffffff">
+			<dest frame="none" gradient_bottom="#8d8d8d" gradient_top="#8d8d8d" text="#ffffff" />
+		</group_column>
+		<linked_tabs 1="#ffa9ae" 2="#cfff81" 3="#a2d0ff" 4="#ffdb7a" 5="#e6afff" 6="#ffff78" 7="#74ffff" 8="#ff765e" />
+		<jobsbar back="#f0f0f0" enable="no" text="#000000" />
+		<fields fieldDefaults="1">
+			<field bg="#f7f7f7" fg="none" id="sortfield" styles="0" />
+			<field bg="none" fg="none" id="modifieddate" styles="48" width="0" />
+			<field bg="none" fg="none" id="modified" styles="48" width="0" />
+		</fields>
+	</colors>
+	<viewpane bg_col="#ffffff" flags="257" gamma="100" pic_col="#fcfcfc" />
+	<layout new_flags="0x6141">
+		<startup />
+		<command />
+		<lister_title>%T - Directory Opus</lister_title>
+	</layout>
+	<dblclk flags="0x800405">
+		<layout />
+		<command />
+		<icon_layout />
+		<icon_command />
+		<win_e_layout />
+		<win_e_command />
+		<text>C:\Program Files\Notepad++\notepad++.exe</text>
+		<file_display>Go UP BACK</file_display>
+		<file_display_mmb />
+	</dblclk>
+	<toolbars fdb="File Display" flags="0x402a8d" spacing="8,5,150" viewer="Image Viewer">
+		<color base="none" gradient1="none" gradient2="none">
+			<custom officeframe="none" officegradient1="none" officegradient2="none" officegrip="none" officehot="none" officehot1="none" officehot2="none" officepush="none" officepush2="none" officetick="none" officetickhot="none" />
+		</color>
+		<viewmodes />
+	</toolbars>
+	<log activity_log_size="64" custom="0xd4d" flags="0xd4d" max="1000" />
+	<images flags="0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0" id="2,3,4,5,6,7,0,0,0,0" key="0,0,0,0,0,0,0,0,0,0" />
+	<zip comp="5" flags="0x460001">
+		<ext>.zip;.jar;.exe</ext>
+		<hideext>.exe</hideext>
+		<auto>.exe;.msi</auto>
+	</zip>
+	<thumbnails cache_size="0x1388" fill="#f2f2f2" flags="0x1df070" folder1="#ffffa0" folder2="#ffd773" folderline="#c58c00" foldertop="#ffff82" lines="2" max_threads="24" overlay_color="#0078d7" single_image="*" size="0x960096" size2="150,150,150" spacing="12,6,150" />
+	<tiles flags="206" size="0x3001a" spacing="0x60006" spacing2="6,6,150" thumb_size="0x600060" thumb_size2="96,96,150">
+		<colors fill="#ffffff" plating1="#c0c0c0" plating2="#ffffff" plating3="#808080" plating4="#808080" />
+	</tiles>
+	<recent flags="31" history="10" limit="10" />
+	<smartfav limit="10" points="0x5,0x5,0x5,0xa,0x8,0x8,0x3,0x5,0x8,0x5,0xa,0xa,0x8,0x5,0xa,0x8,0x8,0x0,0x0" size="100" thresh="40" />
+	<viewer bg="#fcfcfc" customtitle="" dblclkcmd="" edgewidth="20" flags="0x202c1901" flags2="0xc0000" gamma="100" lbuttoncmd="" markedthumb="96,96,150" mbuttoncmd="" minwidth="800,0,150" speed="10.000000" tagcol="Marked Pictures\%F" />
+	<foldertab_size>0x9600aa</foldertab_size>
+	<foldertab_size2>0xc00096</foldertab_size2>
+	<foldertab_size3>170,150,150</foldertab_size3>
+	<foldertab_size4>150,192,150</foldertab_size4>
+	<transanims disable="yes" navback="default" navforward="default" navinto="default" navother="default" navup="default" prefspages="default" />
+	<jumplist flags="0xf4210" />
+	<filters prefix="">
+		<hide>
+			<file>(desktop.ini|thumbs.db|ehthumbs_vista.db)</file>
+			<folder />
+		</hide>
+	</filters>
+	<fayt defmode="9" filter_key="42" timeout="5.000000">
+		<modes>
+			<cmd back="#6fdd00" key="62" text="#000000" />
+			<doscmd back="#6fdd00" key="63" text="#000000" />
+			<err back="#ff6666" text="#ffffff" />
+			<go back="#99d9ea" text="#000000" />
+			<filter back="#bfafdf" text="#000000" />
+			<range back="#c8b867" key="35" text="#000000" />
+			<search back="#fdfcc2" key="61" text="#000000" />
+			<select back="#ffc20e" key="58" text="#000000" />
+			<find back="#ffffff" key="46" text="#000000" />
+			<tabs back="#f1e82c" key="64" text="#000000" />
+			<wslcmd back="#6fdd00" key="124" text="#000000" />
+		</modes>
+	</fayt>
+</prefs>
