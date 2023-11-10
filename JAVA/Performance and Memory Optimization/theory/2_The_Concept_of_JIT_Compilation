@@ -1,0 +1,47 @@
+1.	So initially, the JVM acts like any other interpreter running each line of code as it is needed. However, by default, this would make the code execution somewhat slow. 
+	Certainly, if you compare this to code written in a language like C, which would be compiled to native machine code (the way that this kind of language works is that the code is 
+	compiled into a runnable format the operating system can comprehend directly. It doesn't need any additional software to interpret or run it.
+	This makes it quick to run compared to interpreted languages.), we lose the write once, run anywhere feature of Java. So to help get around this problem of slower execution and 
+	interpreted languages than compiled languages, the Java Virtual Machine has a feature called Just in Time compilation or JIT compilation for short for JVM will monitor which 
+	branches of code are run the most often. Which methods or parts of methods, specifically loops, are executed the most frequently. And then the virtual machine can decide, for 
+	example, that a particular method is being used a lot. And so code execution would be speeded up if that method was compiled to native machine code. So at this point, some of our 
+	application is being run in interpretive mode as bytecode and some is no longer bytecode, but is running as compiled native machine code. The part that has been compiled to native
+	machine code will run faster than the bytecode interpreted part. Just to be clear them by native machine code, we mean executable code that can be understood directly by your 
+	operating system. So if you're running this application on Windows, part of the bytecode has been compiled into code that can be natively understood by the Windows operating 
+	system. If we were r
+	unning on a Mac, then the JVM would have compiled this to native Mac code. The native Windows code and the native Mac code would of course, be different. 
+	They're not compatible. The process of compiling converting the bytecode to native machine code is run in a separate thread. The virtual machine is, of course, a multithreaded 
+	application itself. So the thread within the virtual machine responsible for running the code that is interpreting the code and executing the bytecode won't be affected by the 
+	thread doing compiling. So the process of compiling doesn't stop the application running. While the compilation is taking place, the JVM will continue to use the interpreted 
+	version. But once that compilation is complete and the native machine code version is available, well, then the virtual machine will seamlessly switch to use the compiler version 
+	instead of the more bytecode.
+
+2.  
+	n - native method
+	s - method is synchronized method
+	! - Exception handling is happening
+	% - code has been natively compiled and running in special part of memory called, the code cached
+
+3.  Now, there are actually two compilers built into the Java virtual machine called C1 and C2. The C1 compiler is able to do the first three levels of compilation. Each is 
+	progressively more complex than the last one. And the C2 compiler can do the fourth level. The virtual machine decides which level of compilation to apply to a particular 
+	block of code based on how often it is being run and how complex or time-Consuming it is. This is called profiling the code.If the code has been called enough times, then 
+	we reach level four and the C2 compiler has been used instead and this means that our code is even more optimized than when it was compiled using the C1 compiler.and the Java 
+	virtual machine can actually decide, you know what, this code is being used so much. Not only am I going to compile it to a level four, I'm also going to put that compiled code 
+	into the code cache, the special area of memory, because that will be the quickest way for it to be accessible 	and therefore run.
+4.  Well, when code has been compiled to Tier four or using the C2 compiler, we also know that if it's going to be used a lot, then Java will place that code into the code cache.
+    But this code cache has a limited size and if there are lots of methods that could be compiled to this level, well, then some will need to be removed from the code cache to make 
+	space for the next one to be inserted and the removed method could be recomposed and be added later on. In other words, in large applications with lots of methods that could be 
+	compile to level for over time, some methods might be moved into the code cache, then moved out there, moved back again and so on. Now, when this happens, the default code cache 
+	size might not be sufficient and increasing the size of the code cache can lead to an improvement in our applications performance. Now, if that happens, you might see the 
+	following warning message appear in the console of your application. The warning messages "code cache is full Compiler has been disabled". This is telling us that the code would 
+	run better if another part of it could be compared to native machine code, but there's no room for it in the code cache. What's more, all the code that is in the code cache is 
+	actively being used, so there's no part of the code cache that can easily be cleaned up.
+5.  In compilers called C1 and C2, there are compilation tiers. Tier 1 to 3 (T1-T3) are carried out with the C1 compiler and Tier 4 (T4) with the C2 compiler. If you use the 32 bit 
+    version that only has the C1 compiler available, if you pick the 64 bit version, then both C1 and C2 are available. The C1 compiler is known as the client's compiler and the C2 
+	compiler is known as the server compiler.
+6.  But there are two factors here that can affect the performance of our application. The first is how many threads are available to run this compiling process?
+	And the second is what's the threshold for native compilation? In other words, how many times does a method need to get run before Java decides that method should be compiled?
+	The Flag "CICompilerCount" has a value of three. So by default, our compiler will be allowed to use three threads to do the compiling. The minimum number you can provide here, 
+	the minimum number of threads is to actually it's one if you want a 32 bit machine at once, only the client compiler. But otherwise it's two one for the client compiler and one 
+	for the server compiler. So increasing the number of threads available to the compiler can improve performance. But what about the threshold, the number of times a method needs 
+	to run before it is natively compiled? Well, the flag that controls this is "CompileThreshold".
