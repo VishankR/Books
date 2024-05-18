@@ -1,0 +1,18 @@
+<project default="run">
+
+	<target name="compile">
+		   <javac srcdir="." includeantruntime="true" includes="HelloWorld.java" destdir="."></javac>
+	</target>
+
+	<target name="run" depends="compile">
+		   
+		   <java classname="HelloWorld" fork="true">
+			 <classpath>
+				<pathelement path="."/>
+			 </classpath>
+		   
+		   </java>
+		   
+	</target>
+
+</project>

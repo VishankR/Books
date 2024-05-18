@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolbar version="12.29">
+	<wallpaper enabled="yes" inheritable="yes" type="tile">
+		<std_type>toolbar</std_type>
+	</wallpaper>
+	<buttons backcol="none" display="label" textcol="none" type="menu">
+		<button backcol="none" display="both" hotkey="ctrl+shift+A" label_pos="right" textcol="none">
+			<label>Admin</label>
+			<tip>Temporarily elevate the permissions of the current Lister, which lets you perform multiple protected file operations without UAC prompting</tip>
+			<icon1>#adminmode</icon1>
+			<function type="normal">
+				<instruction>Set ADMIN=Toggle</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="label" dpi="150" field_type="filter" separate="yes" size="294" textcol="none">
+			<label>Filter</label>
+			<tip>Directly enter a wildcard pattern to filter files visible in the current Lister</tip>
+			<function type="normal">
+				<instruction>Set FILTER</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none" type="menu_button">
+			<label>P&amp;roperties</label>
+			<tip>View properties for selected files and folders</tip>
+			<icon1>#properties</icon1>
+			<function type="normal">
+				<instruction>Properties</instruction>
+			</function>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Properties</label>
+				<tip>View properties for selected files and folders</tip>
+				<icon1>#properties</icon1>
+				<function type="normal">
+					<instruction>Properties</instruction>
+				</function>
+			</button>
+			<button backcol="none" disable_key="yes" display="both" hotkey="ctrl+B" label_pos="right" textcol="none">
+				<label>&amp;Attributes\tCtrl+B</label>
+				<tip>Change the attributes and timestamps of selected files</tip>
+				<icon1>#setattr</icon1>
+				<function type="normal">
+					<instruction>SetAttr</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" hotkey="ctrl+P" label_pos="right" textcol="none">
+				<label>&amp;Description\tCtrl+P</label>
+				<tip>Enter your own description for selected files</tip>
+				<icon1>#setcomment</icon1>
+				<function type="normal">
+					<instruction>SetAttr DESCRIPTION</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" hotkey="ctrl+M" label_pos="right" textcol="none">
+				<label>&amp;Edit Metadata\tCtrl+M</label>
+				<tip>Edit the metadata of selected files</tip>
+				<icon1>#editmeta</icon1>
+				<function type="normal">
+					<instruction>SetAttr META</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>Modified Date From Created</label>
+				<icon1>#setdate</icon1>
+				<function type="normal">
+					<instruction>SetAttr MODIFIED=created </instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Touch Modified Date</label>
+				<tip>Set last modified timestamp of selected files to the current date and time.</tip>
+				<icon1>#setdate</icon1>
+				<function type="normal">
+					<instruction>SetAttr MODIFIED=now</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>&amp;Set Label</label>
+				<tip>Assign a label to a file or folder</tip>
+				<icon1>#setcolor</icon1>
+				<function type="normal">
+					<instruction>Properties SETLABEL !menu LABELCATEGORY raw:~(Status)</instruction>
+				</function>
+			</button>
+			<button backcol="none" display="both" label_pos="right" textcol="none">
+				<label>Stat&amp;us</label>
+				<tip>Assign icons that can be seen in the Status column.</tip>
+				<icon1>#status</icon1>
+				<function type="normal">
+					<instruction>Properties SETLABEL !menu LABELCATEGORY raw:Status ADDLABEL SETLABELTOGGLE</instruction>
+					<instruction>[</instruction>
+					<instruction>Set COLUMNSADD=Status(!1+Name)</instruction>
+					<instruction>]</instruction>
+				</function>
+			</button>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Make .bak</label>
+			<icon1>#makedir</icon1>
+			<function type="script">
+				<instruction>@script JScript</instruction>
+				<instruction>// Button that creates &apos;.bak&apos; backups for any number of selected files. If a .bak already exists for a file, it will create .bak2, .bak3 and so on.</instruction>
+				<instruction>// By ThioJoe</instruction>
+				<instruction>// Updated: 8/1/22</instruction>
+				<instruction />
+				<instruction>function OnClick(clickData) {</instruction>
+				<instruction>	// You can change the backup extension base string to be whatever you want here. Must include period.</instruction>
+				<instruction>	// Default = &apos;.bak&apos;</instruction>
+				<instruction>	backupExtension = &apos;.bak&apos;</instruction>
+				<instruction>	////////////////////////////////////////////////////////////////////////</instruction>
+				<instruction />
+				<instruction>	function createBak(fileItem) {</instruction>
+				<instruction>		lastBakNum = 0;</instruction>
+				<instruction>		// Create item object of selected file</instruction>
+				<instruction>		selectedFile = fileItem;</instruction>
+				<instruction>		//Get name of selected file</instruction>
+				<instruction>		selectedFileFullName = String(selectedFile.name);</instruction>
+				<instruction>		selectedFileExt = String(selectedFile.ext);</instruction>
+				<instruction>		selectedFileNameStem = String(selectedFile.name_stem);</instruction>
+				<instruction>		</instruction>
+				<instruction>		//Go through filenames in folder, if any contains fileFullName.bak, check if # at end is larger than current, if so record into lastBakNum</instruction>
+				<instruction>		enumFiles.moveFirst();</instruction>
+				<instruction>		while (enumFiles.atEnd() == false) {</instruction>
+				<instruction>			currentFileName = String(enumFiles.item().name)</instruction>
+				<instruction>			currentFileNameExt = String(enumFiles.item().ext)</instruction>
+				<instruction>				</instruction>
+				<instruction>			// Checks if stem of currently scanned file is same as selected file with .bak added</instruction>
+				<instruction>			theoreticalBakName = selectedFileFullName + backupExtension;</instruction>
+				<instruction>			theoreticalBakNameLength = theoreticalBakName.length;</instruction>
+				<instruction>			</instruction>
+				<instruction>			//Checking if the currently scanned file is already a .bak file of the selected file</instruction>
+				<instruction>			//By checking if scanned file contains selected file name + bak, from beginning</instruction>
+				<instruction>			if (currentFileName.substr(0, theoreticalBakNameLength) == theoreticalBakName) {</instruction>
+				<instruction>				//Checks if extension is .bak or .bak*</instruction>
+				<instruction>				if (currentFileNameExt.substr(0,backupExtensionLength) == backupExtension) {</instruction>
+				<instruction>					// If existing backup file extension is exactly .bak with nothing after, set lastBakNum to 1, so next one will be .bak2, not .bak1 (.bak1 could be  with .bak)</instruction>
+				<instruction>					if (currentFileNameExt == backupExtension) {</instruction>
+				<instruction>						if (lastBakNum == 0) {</instruction>
+				<instruction>							lastBakNum = 1;</instruction>
+				<instruction>						}</instruction>
+				<instruction>					} </instruction>
+				<instruction>					// If it starts with .bak but has something after .bak</instruction>
+				<instruction>					else {</instruction>
+				<instruction>						// Gets text or number after &quot;.bak&quot;, which should be a number</instruction>
+				<instruction>						extEnding = currentFileNameExt.substr(backupExtensionLength);</instruction>
+				<instruction>						//Checks if anything after .bak is not a number</instruction>
+				<instruction>						if (isNaN(extEnding) == false) {</instruction>
+				<instruction>							// Parse the ending number into an integer in base 10</instruction>
+				<instruction>							extEndingNum = parseInt(extEnding, 10);</instruction>
+				<instruction>							// Only update lastBakNum if it is the largest .bak # found so far</instruction>
+				<instruction>							if (extEndingNum &gt; lastBakNum) {</instruction>
+				<instruction>								lastBakNum = extEndingNum;</instruction>
+				<instruction>							}</instruction>
+				<instruction>						}</instruction>
+				<instruction>					}</instruction>
+				<instruction>				}</instruction>
+				<instruction>			}</instruction>
+				<instruction>			enumFiles.moveNext();</instruction>
+				<instruction>		}</instruction>
+				<instruction>		</instruction>
+				<instruction>		// If there is no already existing .bak or .bak# of the selected file, create them</instruction>
+				<instruction>		if (lastBakNum == 0) {</instruction>
+				<instruction>			commandString = &apos;Copy DUPLICATE &quot;&apos; + selectedFile + &apos;&quot; AS *&apos; + backupExtension;</instruction>
+				<instruction>			clickData.func.command.RunCommand(commandString);</instruction>
+				<instruction>		}</instruction>
+				<instruction>		else {</instruction>
+				<instruction>			newBakNum = lastBakNum + 1;</instruction>
+				<instruction>			commandString = &apos;Copy DUPLICATE &quot;&apos; + selectedFile + &apos;&quot; AS *&apos; + backupExtension + newBakNum;</instruction>
+				<instruction>			clickData.func.command.RunCommand(commandString);</instruction>
+				<instruction>		}</instruction>
+				<instruction>	}</instruction>
+				<instruction>	</instruction>
+				<instruction>	// Get data about selected files, and rest of the files in the folder</instruction>
+				<instruction>	allSelectedFiles = clickData.func.sourcetab.selected_files;</instruction>
+				<instruction>	enumSelectedFiles = new Enumerator(allSelectedFiles);</instruction>
+				<instruction>	enumFiles = new Enumerator(clickData.func.sourcetab.files);  //Enumerate all files in folder. Does this before any bak files are created to save unecessary checking later</instruction>
+				<instruction>	backupExtensionLength = backupExtension.length;</instruction>
+				<instruction />
+				<instruction>	// Runs the main function for each selected file</instruction>
+				<instruction>	enumSelectedFiles.moveFirst();</instruction>
+				<instruction>	while (enumSelectedFiles.atEnd() == false) {</instruction>
+				<instruction>		currentFile = enumSelectedFiles.item()</instruction>
+				<instruction>		createBak(currentFile);</instruction>
+				<instruction>		enumSelectedFiles.moveNext();</instruction>
+				<instruction>	}</instruction>
+				<instruction>}</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="label" field_type="spacer" size="full" textcol="none">
+			<label>Spacer</label>
+			<icon1>#spacer</icon1>
+			<function type="normal">
+				<instruction>Set SPACER</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="label" dpi="150" field_type="thumbnailsize" size="225" textcol="none">
+			<label>Thumbnail size</label>
+			<tip>Displays a slider control letting you dynamically adjust the thumbnail size in the current Lister</tip>
+			<function type="normal">
+				<instruction>Show THUMBNAILSIZE=field</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" label_pos="right" textcol="none">
+			<label>Thumbnails</label>
+			<tip>Displays thumbnails of image files</tip>
+			<icon1>#thumbnails</icon1>
+			<function type="normal">
+				<instruction>Set VIEW=Thumbnails</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" hotkey="ctrl+shift+D" label_pos="right" textcol="none">
+			<label>Details</label>
+			<tip>Displays the details of each item</tip>
+			<icon1>#detailsmode</icon1>
+			<function type="normal">
+				<instruction>Set VIEW=Details</instruction>
+				<instruction>Set COLUMNSREMOVE=thumbnail</instruction>
+				<instruction>@toggle:if&amp;!COLUMNSTOGGLE=thumbnail</instruction>
+			</function>
+		</button>
+		<button backcol="none" display="both" hotkey="ctrl+shift+H" label_pos="right" textcol="none">
+			<label>Thumb + Detail</label>
+			<tip>Displays the details of each item along with a column that shows thumbnails</tip>
+			<icon1>#thumbtails</icon1>
+			<function type="normal">
+				<instruction>Set VIEW=Details</instruction>
+				<instruction>Set COLUMNSADD=thumbnail(0,96)</instruction>
+				<instruction>@toggle:if&amp;COLUMNSTOGGLE=thumbnail</instruction>
+			</function>
+		</button>
+	</buttons>
+</toolbar>

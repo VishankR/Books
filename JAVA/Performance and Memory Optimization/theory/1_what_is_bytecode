@@ -1,0 +1,28 @@
+We're going to start this course by looking at what the JVM actually does when it runs the code that
+we have written.
+You're hopefully aware that the code that we write in Java is compiled by the Java compiler into bytecode.
+These are the class files that we create, may be packaged together into a jar of a war file.
+When we run our application using the Java Command, the bytecode is then run by the Java Virtual Machine,
+or JVM.
+We often think of this as the JVM or the virtual machine is interpreting the bytecode.
+This structure compiling a low Java code into bytecode and then the bytecode being interpreted at one
+time is how Java achieves one of its benefits.
+Well, certainly at the time that Java was first created, this was an important feature, which is
+that we can write code once and run it with consistent results on any hardware that has a Java virtual
+machine.
+So the same Java code can be run on a Mac, Windows, Linux or any other operating system for which
+a JVM exists.
+And that's because our Java code is going to be compiled into byte code and the Java, the Java virtual
+machine is able to interpret this by code.
+But the JVM, however, is not simply interpreting bytecode.
+It contains a number of features and complex algorithms to make it more efficient than a traditional
+code interpretor would be.
+If you were writing code in a language such as PHP, which is not compiled but is interpreted at runtime
+using an interpreter such as the Apache Web server.
+Well, each line of code is only looked at, analyzed and the way to execute it determined as it is needed
+within the Java virtual machine.
+It's a much more complicated process.
+So the java virtual machine then is not being asked to run Java code, but rather Java bytecode.
+And in fact, any language which can be compiled to JVM compatible bytecode can be run on the Java virtual
+machine and so as a result, pretty much everything we're going to talk about in this course will apply not
+just to Java, but to SCALA, Cotlin, groovy closure, in fact, any other JVM language.

@@ -1,0 +1,63 @@
+Issue Management
+================
+
+  <issueManagement>
+    <system>Bugzilla</system>
+    <url>http://127.0.0.1/bugzilla/</url>
+  </issueManagement>
+
+Continuous Integration Management
+=================================
+
+  <ciManagement>
+    <system>continuum</system>
+    <url>http://127.0.0.1:8080/continuum</url>
+    <notifiers>
+      <notifier>
+        <type>mail</type>
+        <sendOnError>true</sendOnError>
+        <sendOnFailure>true</sendOnFailure>
+        <sendOnSuccess>false</sendOnSuccess>
+        <sendOnWarning>false</sendOnWarning>
+        <configuration><address>continuum@127.0.0.1</address></configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
+
+Mailing Lists
+=============
+
+  <mailingLists>
+    <mailingList>
+      <name>User List</name>
+      <subscribe>user-subscribe@127.0.0.1</subscribe>
+      <unsubscribe>user-unsubscribe@127.0.0.1</unsubscribe>
+      <post>user@127.0.0.1</post>
+      <archive>http://127.0.0.1/user/</archive>
+      <otherArchives>
+        <otherArchive>http://base.google.com/base/1/127.0.0.1</otherArchive>
+      </otherArchives>
+    </mailingList>
+  </mailingLists>
+
+
+Software Configuration Management
+=================================
+
+  <scm>
+    <connection>scm:svn:http://127.0.0.1/svn/my-project</connection>
+    <developerConnection>scm:svn:https://127.0.0.1/svn/my-project</developerConnection>
+    <tag>HEAD</tag>
+    <url>http://127.0.0.1/websvn/my-project</url>
+  </scm>
+
+prerequisites
+=============
+
+<project>
+   ...
+   <prerequisites>
+       <maven>3.0.0</maven>
+   </prerequisites>
+   ...
+</project>

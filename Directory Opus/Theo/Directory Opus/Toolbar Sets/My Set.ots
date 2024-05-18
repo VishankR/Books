@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<toolbars flags="0">
+	<toolbar type="top">
+		<file>Menu (Thio).dop</file>
+	</toolbar>
+	<toolbar type="top">
+		<file>My Main Toolbar (Thio).dop</file>
+	</toolbar>
+	<toolbar type="top">
+		<file>Custom Location Bar (Thio).dop</file>
+	</toolbar>
+	<toolbar type="fdbottom">
+		<file>Utilities (Thio).dop</file>
+	</toolbar>
+</toolbars>

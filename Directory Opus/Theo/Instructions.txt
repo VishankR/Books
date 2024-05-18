@@ -1,0 +1,29 @@
+1. First import the theme in Directory Opus by going to:  Settings > Lister Themes > File > Import Theme > Select 'Thio Light Theme.dlt'
+	• Before applying the custom theme, you probably should save the default theme by going to: File > "Save New Theme"
+		• Call it whatever you want, like "Default Theme", and when it asks you for Theme Options, check everything possible. Then hit Save
+	• Now apply the custom theme by selecting it and hitting 'Apply'.  Select all possible options (Colors, Fonts, Toolbar Icons)
+	
+	
+2. To get all the preferences and settings the same as I had them, we will copy the config files:
+	• First make a backup of the initial default settings by going to: Settings > Backup and Restore
+		• Select "Backup Configuration", then name it what you want, and at the 'Select Backup Options' page, select everything
+			--Then hit next a few times until it's done
+			--Note: It is a good idea to make a backup any time you start changing things around, just in case
+			
+	• Now close all Directory Opus windows running. It may also be running in the background, so check for the icon in the system tray (bottom right of screen), and exit it there too if it is.
+		--To be sure, you could even open the task manager and see if it's running
+		--The program must not be running when you copy over the files, or else it won't load them
+		
+	• Open WINDOWS FILE EXPLORER (not Directory Opus) and go to the "Themes and Layouts" folder you extracted from the zip file
+		-Note: If you set directory opus as the default file manager, just double clicking the folder will open it with directory opus, but we don't want it running
+		-To open windows explorer, you can search the start menu for "File Explorer" and open that. Then navigate to the folder
+		
+	• Open another Windows File Explorer window (again NOT directory opus), and navigate to the AppData Roaming folder.
+		--To go there directly, in Windows Explorer, clear the address / path bar near the top and enter:  %APPDATA%
+		--Otherwise it is located at: "C:\Users\WhateverYourUsername\AppData\Roaming\"
+	
+	• In the "Roaming" folder, go into the "GPSoftware" directory
+	• Now in the other Explorer window with the extracted folder, copy the "Directory Opus" folder, and paste it over the "Directory Opus" folder in the "GPSoftware" folder.
+		--It will only add / overwrite a few files, not the entire directory
+		
+	• Now you can run Directory Opus again and it should be all set. You'll probably want to customize the preferences to your liking though.

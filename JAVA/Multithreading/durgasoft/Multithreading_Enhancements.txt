@@ -1,0 +1,16 @@
+ThreadGroup class (presents in java.lang package and direct child class of Object class) - 
+
+1. Based on functionality we can group threads or subgroups of thread into a single unit which is nothing but a group of threads.
+2. The main advantage of thead group is that we can perform common operations.
+3. Every thread in java belongs to some threadgroup.
+4. "system" group is the root group. It contains system level threads like - Finalizer, AttachedListner, ReferenceHandler, SignalDispatcher, "main" thread group etc.
+5. If we create a new ThreadGroup then by default the parent group will be the same as the creating thread.
+
+java.util.concurrent.locks package(java 1.5) - 
+
+problems with traditional synchronized keyword - 
+1. We are not having any flexibility to try for a lock without waiting.
+2. There is no way to specify maximum wating time or some kind of condition for a thread to get lock so that thread will wait untill it gets lock which may create performance problem like Deadlock.
+3. There is  no fairness parameter.
+4. There is no method to list out all waiting threads for a lock.
+5. Syncronized keyword we can use either at method level or within a method (at bock level), it is not possible to use across methods or blocks.
